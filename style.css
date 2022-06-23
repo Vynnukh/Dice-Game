@@ -22,7 +22,12 @@ body {
 #DieButton {
     height: 50px;
     width: 100px;
-
+    background-color: maroon;
+    color: white;
+    border-radius: 5px;
+    border-color: maroon;
+    border-style: ridge;
+    cursor: pointer;
 }
 
 #TitlePage {
@@ -31,6 +36,8 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-direction: column;
+    
 }
 
 #score {
@@ -58,4 +65,20 @@ body {
 #win {
     display: none;
     
+}
+
+#dF3 {
+    display: none;
+}
+
+#dF4 {
+    display: none;
+}
+
+#dF5 {
+    display: none;
+}
+
+#dF6 {
+    display: none;
 }
