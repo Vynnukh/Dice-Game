@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#btnConatiner {
+    display: flex;
+    width: 100vw;
+    position: fixed;
+    justify-content: space-evenly;
+    bottom: 0;
+    height: 10pc;
+    background-color: antiquewhite;
+}
+
+#DieButton {
+    height: 50px;
+    width: 100px;
+
+}
+
+#TitlePage {
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#score {
+    font-size: 26px;
+    margin-top: 10;
+}
+
+#dieDisplay {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    bottom: -12.5pc;
+    left: 20pc;
+    border-radius: 3px;
+}
+
+#lose {
+    display: none;
+}
+
+#PrimaryGame {
+    display: none;
+}
+
+#win {
+    display: none;
+    
+}

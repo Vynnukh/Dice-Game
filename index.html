@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roll Game</title>
+</head>
+<body>
+
+    <section id = "TitlePage">
+        <h1>Dice Game</h1>
+        <h2>Begin the game by rolling the Dice</h2>
+
+        <div id = "btnContainer">
+        <button id = "DieButton">Roll The Dice</button>
+        </div>
+
+        <p>Rules: <br> You lose if your roll a 1. <br> You win if your score reaches or surpasses 26</p>
+    </section>
+
+    <section id = "PrimaryGame">
+        <h1>Dice Game</h1>
+        
+        <h2>Current Score: </h2>
+        <h2 id ="score"></h2>
+
+
+        <img id = "dieDisplay"> 
+        <!-- Image Of Dice randomised?? -->
+
+        <div id = "btnContainer">
+        <button id = "DieButton">Roll The Dice</button>
+        </div>
+
+        <p>Rules: <br> You lose if your roll a 1. <br> You win if your score reaches or surpasses 21</p>
+
+    </section>
+
+    <section id = "lose">
+        <h1>Dice Game</h1>
+
+        <h1>You've Lost! : </h1>
+        <h2 id ="score"></h2>
+
+        <img src="./imgs/dice_face_1.png" alt="Die face 1">
+
+        <div id = "btnContainer">
+        <button id = "DieButton">Roll The Dice to begin a new game</button>
+        </div>
+
+        <p>Rules: <br> You lose if your roll a 1. <br> You win if your score reaches or surpasses 21</p>
+
+    </section>
+
+    <section id = "win">
+        <h1>Dice Game</h1>
+
+        <h2>You've Won! : </h2>
+        <h2 id ="score"></h2>
+
+        <!-- Image Of Dice randomised??? -->
+
+        <div id = "btnContainer">
+        <button id = "DieButton">Roll The Dice to begin a new game</button>
+        </div>
+
+        <p>Rules: <br> You lose if your roll a 1. <br> You win if your score reaches or surpasses 21</p>
+
+    </section>
+
+    <script src="./app.js"></script>
+</body>
+</html>
