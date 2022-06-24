@@ -6,10 +6,16 @@ const value5 = document.getElementById("dF5")
 const value6 = document.getElementById("dF6")
 const loss = document.getElementById("lose")
 const victory = document.getElementById("win")
+let tPgBtn = document.getElementById("TitleButton")
+let Btn2 = document.getElementById("PrimaryButton")
+let Btn3 = document.getElementById("DiceButton3")
+let Btn4 = document.getElementById("DiceButton4")
+let Btn5 = document.getElementById("DiceButton5")
+let Btn6 = document.getElementById("DiceButton6")
 let currentRoll = Math.ceil(Math.random() * 6)
 let currentScore = 0
-let scoreDisplay = document.getElementById("score")
-let btn = document.getElementsByClassName("DieButton")
+let scoreDisplay = document.getElementsByClassName("score")
+// let btn = document.getElementsByid("DieButton")
 let dDsply = document.getElementById("Die_Display")
 
 const Die = {
@@ -51,6 +57,7 @@ let DiceBtn = () => {
         // value4.style.display = "none"
         // value5.style.display = "none"
         // value6.style.display = "none"
+        scoreDisplay.innerHTML = "<h2>" + `${currentScore}` + "</h2>"
         
     } else if (currentRoll == 2 && currentScore <= 20) {
         main.style.display = "flex"
@@ -60,7 +67,7 @@ let DiceBtn = () => {
         // value4.style.display = "none"
         // value5.style.display = "none"
         // value6.style.display = "none"
-        
+        scoreDisplay.innerHTML = "<h2>" + `${currentScore}` + "</h2>"
         return(currentScore + 2)
     } else if (currentRoll == 3 && currentScore <= 20) {
         value3.style.display = "flex"
@@ -71,6 +78,7 @@ let DiceBtn = () => {
         // value4.style.display = "none"
         // value5.style.display = "none"
         // value6.style.display = "none"
+        scoreDisplay.innerHTML = "<h2>" + `${currentScore}` + "</h2>"
         
         return(currentScore + 3)
     } else if (currentRoll == 4 && currentScore <= 20) {
@@ -82,6 +90,7 @@ let DiceBtn = () => {
         // loss.style.display = "none"
         // value5.style.display = "none"
         // value6.style.display = "none"
+        scoreDisplay.innerHTML = "<h2>" + `${currentScore}` + "</h2>"
         
         return(currentScore + 4)
     } else if (currentRoll == 5 && currentScore <= 20) {
@@ -93,6 +102,7 @@ let DiceBtn = () => {
         // value4.style.display = "none"
         // loss.style.display = "none"
         // value6.style.display = "none"
+        scoreDisplay.innerHTML = "<h2>" + `${currentScore}` + "</h2>"
         
         return(currentScore + 5)
     } else if (currentRoll == 6 & currentScore <= 20) {
@@ -104,13 +114,16 @@ let DiceBtn = () => {
         // value4.style.display = "none"
         // value5.style.display = "none"
         // loss.style.display = "none"
+        scoreDisplay.innerHTML = "<h2>" + `${currentScore}` + "</h2>"
         
         return(currentScore + 6)
     } else if (currentScore >= 21) {
         victory.style.display = "flex"
         tPg.style.display = "none"
         main.style.display = "none"
-        
+        scoreDisplay.innerHTML = "<h2>" + `${currentScore}` + "</h2>"
+
+        return(currentScore)
     } else {
         alert("This Game Is Broken")
     }
@@ -118,7 +131,37 @@ let DiceBtn = () => {
 
 // ^ Had to comment out some of this because when I had the buttons working a bit they broke when this was inputted
 
-btn.addEventListener("click", () => {
+tPgBtn.addEventListener("click", () => {
+    currentRoll
+    alert("???")
+    DiceBtn()
+})
+
+Btn2.addEventListener("click", () => {
+    currentRoll
+    alert("???")
+    DiceBtn()
+})
+
+Btn3.addEventListener("click", () => {
+    currentRoll
+    alert("???")
+    DiceBtn()
+})
+
+Btn4.addEventListener("click", () => {
+    currentRoll
+    alert("???")
+    DiceBtn()
+})
+
+Btn5.addEventListener("click", () => {
+    currentRoll
+    alert("???")
+    DiceBtn()
+})
+
+Btn6.addEventListener("click", () => {
     currentRoll
     alert("???")
     DiceBtn()
