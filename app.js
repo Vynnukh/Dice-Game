@@ -1,5 +1,5 @@
 const tPg = document.getElementById("TitlePage")
-const main = document.getElementById("primary")
+const main = document.getElementById("primaryGame")
 const value3 = document.getElementById("dF3")
 const value4 = document.getElementById("dF4")
 const value5 = document.getElementById("dF5")
@@ -10,6 +10,7 @@ let currentRoll = Math.ceil(Math.random() * 6)
 let currentScore = 0
 let scoreDisplay = document.getElementById("score")
 let btn = document.getElementsByClassName("DieButton")
+let dDsply = document.getElementById("Die_Display")
 
 const Die = {
     "./imgs/dice_face_1.png":1,
@@ -21,7 +22,25 @@ const Die = {
 }
 
 // ^ Still figuring out how this array can be implemented properly
-
+let DiceBtnB = () => {
+    if(currentRoll === 1 && currentScore <= 20) {
+        loss.style.display = "flex"
+        loss.style.justifyContent = "space-evenly"
+        tPg.style.display = "none"
+    } else if (currentScore <= 20) {
+        main.style.display = "flex"
+        tPg.style.display = "none"
+        dDsply.style.display = "flex"
+        dDsply.src = Die[currentRoll-1]
+        return(currentRoll)
+    } else if (currentScore >= 21) {
+        victory.style.display = "flex"
+        tPg.style.display = "none"
+        main.style.display = "none"
+    } else {
+        alert("This Game Is Broken")
+    }
+}
 let DiceBtn = () => {
     if(currentRoll === 1 && currentScore <= 20) {
         loss.style.display = "flex"
@@ -92,6 +111,8 @@ let DiceBtn = () => {
         tPg.style.display = "none"
         main.style.display = "none"
         
+    } else {
+        alert("This Game Is Broken")
     }
 }
 
@@ -99,5 +120,6 @@ let DiceBtn = () => {
 
 btn.addEventListener("click", () => {
     currentRoll
+    alert("???")
     DiceBtn()
 })
