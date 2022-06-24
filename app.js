@@ -106,47 +106,49 @@ let DiceBtn = () => {
 
 tPgBtn.addEventListener("click", () => {
     currentRoll
-    alert(currentScore)
+    alert(`Score : ${currentScore}`)
     DiceBtn()
     return(currentScore)
 })
 
 Btn1.addEventListener("click", () => {
-    tPg.style.display = "none"
-    loss.style.display = "flex"
+    tPg.style.display = "flex"
+    loss.style.display = "none"
 })
 
 Btn2.addEventListener("click", () => {
     currentRoll
-    alert(currentScore)
+    alert(`Score : ${currentScore}`)
     DiceBtn()
     return(currentScore)
 })
 
 Btn3.addEventListener("click", () => {
+    value3.style.display = "none"
     currentRoll
-    alert(currentScore)
+    alert(`Score : ${currentScore}`)
     DiceBtn()
     return(currentScore)
 })
 
 Btn4.addEventListener("click", () => {
+    value4.style.display = "none"
     currentRoll
-    alert(currentScore)
+    alert(`Score : ${currentScore}`)
     DiceBtn()
     return(currentScore)
 })
 
 Btn5.addEventListener("click", () => {
     currentRoll
-    alert(currentScore)
+    alert(`Score : ${currentScore}`)
     DiceBtn()
     return(currentScore)
 })
 
 Btn6.addEventListener("click", () => {
     currentRoll
-    alert(currentScore)
+    alert(`Score : ${currentScore}`)
     DiceBtn()
     return(currentScore)
 })
