@@ -18,35 +18,7 @@ let scoreDisplay = document.getElementsByClassName("score")
 // let btn = document.getElementsByid("DieButton")
 let dDsply = document.getElementById("Die_Display")
 
-const Die = {
-    "./imgs/dice_face_1.png":1,
-    "./imgs/dice_face_2.png":2,
-    "./imgs/dice_face_3.png":3,
-    "./imgs/dice_face_4.png":4,
-    "./imgs/dice_face_5.jpg":5,
-    "./imgs/dice_face_6.png":6
-}
 
-// ^ Still figuring out how this array can be implemented properly
-let DiceBtnB = () => {
-    if(currentRoll === 1 && currentScore <= 20) {
-        loss.style.display = "flex"
-        loss.style.justifyContent = "space-evenly"
-        tPg.style.display = "none"
-    } else if (currentScore <= 20) {
-        main.style.display = "flex"
-        tPg.style.display = "none"
-        dDsply.style.display = "flex"
-        dDsply.src = Die[currentRoll-1]
-        return(currentRoll)
-    } else if (currentScore >= 21) {
-        victory.style.display = "flex"
-        tPg.style.display = "none"
-        main.style.display = "none"
-    } else {
-        alert("This Game Is Broken")
-    }
-}
 let DiceBtn = () => {
     if(currentRoll === 1 && currentScore <= 20) {
         loss.style.display = "flex"
@@ -57,7 +29,7 @@ let DiceBtn = () => {
         // value4.style.display = "none"
         // value5.style.display = "none"
         // value6.style.display = "none"
-        scoreDisplay.innerHTML = "<h2>" + `${currentScore}` + "</h2>"
+        scoreDisplay.innerHTML = "<p>" + `${currentScore}` + "</p>"
         
     } else if (currentRoll == 2 && currentScore <= 20) {
         main.style.display = "flex"
@@ -67,7 +39,7 @@ let DiceBtn = () => {
         // value4.style.display = "none"
         // value5.style.display = "none"
         // value6.style.display = "none"
-        scoreDisplay.innerHTML = "<h2>" + `${currentScore}` + "</h2>"
+        scoreDisplay.innerHTML = "<p>" + `${currentScore}` + "</p>"
         return(currentScore + 2)
     } else if (currentRoll == 3 && currentScore <= 20) {
         value3.style.display = "flex"
@@ -78,7 +50,7 @@ let DiceBtn = () => {
         // value4.style.display = "none"
         // value5.style.display = "none"
         // value6.style.display = "none"
-        scoreDisplay.innerHTML = "<h2>" + `${currentScore}` + "</h2>"
+        scoreDisplay.innerHTML = "<p>" + `${currentScore}` + "</p>"
         
         return(currentScore + 3)
     } else if (currentRoll == 4 && currentScore <= 20) {
@@ -90,7 +62,7 @@ let DiceBtn = () => {
         // loss.style.display = "none"
         // value5.style.display = "none"
         // value6.style.display = "none"
-        scoreDisplay.innerHTML = "<h2>" + `${currentScore}` + "</h2>"
+        scoreDisplay.innerHTML = "<p>" + `${currentScore}` + "</p>"
         
         return(currentScore + 4)
     } else if (currentRoll == 5 && currentScore <= 20) {
@@ -102,7 +74,7 @@ let DiceBtn = () => {
         // value4.style.display = "none"
         // loss.style.display = "none"
         // value6.style.display = "none"
-        scoreDisplay.innerHTML = "<h2>" + `${currentScore}` + "</h2>"
+        scoreDisplay.innerHTML = "<p>" + `${currentScore}` + "</p>"
         
         return(currentScore + 5)
     } else if (currentRoll == 6 & currentScore <= 20) {
@@ -114,14 +86,14 @@ let DiceBtn = () => {
         // value4.style.display = "none"
         // value5.style.display = "none"
         // loss.style.display = "none"
-        scoreDisplay.innerHTML = "<h2>" + `${currentScore}` + "</h2>"
+        scoreDisplay.innerHTML = "<p>" + `${currentScore}` + "</p>"
         
         return(currentScore + 6)
     } else if (currentScore >= 21) {
         victory.style.display = "flex"
         tPg.style.display = "none"
         main.style.display = "none"
-        scoreDisplay.innerHTML = "<h2>" + `${currentScore}` + "</h2>"
+        scoreDisplay.innerHTML = "<p>" + `${currentScore}` + "</p>"
 
         return(currentScore)
     } else {
