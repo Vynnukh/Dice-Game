@@ -7,6 +7,7 @@ const value6 = document.getElementById("dF6")
 const loss = document.getElementById("lose")
 const victory = document.getElementById("win")
 let tPgBtn = document.getElementById("TitleButton")
+let Btn1 = document.getElementById("LossButton")
 let Btn2 = document.getElementById("PrimaryButton")
 let Btn3 = document.getElementById("DiceButton3")
 let Btn4 = document.getElementById("DiceButton4")
@@ -105,36 +106,47 @@ let DiceBtn = () => {
 
 tPgBtn.addEventListener("click", () => {
     currentRoll
-    alert("???")
+    alert(currentScore)
     DiceBtn()
+    return(currentScore)
+})
+
+Btn1.addEventListener("click", () => {
+    tPg.style.display = "none"
+    loss.style.display = "flex"
 })
 
 Btn2.addEventListener("click", () => {
     currentRoll
-    alert("???")
+    alert(currentScore)
     DiceBtn()
+    return(currentScore)
 })
 
 Btn3.addEventListener("click", () => {
     currentRoll
-    alert("???")
+    alert(currentScore)
     DiceBtn()
+    return(currentScore)
 })
 
 Btn4.addEventListener("click", () => {
     currentRoll
-    alert("???")
+    alert(currentScore)
     DiceBtn()
+    return(currentScore)
 })
 
 Btn5.addEventListener("click", () => {
     currentRoll
-    alert("???")
+    alert(currentScore)
     DiceBtn()
+    return(currentScore)
 })
 
 Btn6.addEventListener("click", () => {
     currentRoll
-    alert("???")
+    alert(currentScore)
     DiceBtn()
+    return(currentScore)
 })
